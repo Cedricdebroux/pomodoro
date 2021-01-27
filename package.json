@@ -1,0 +1,36 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cedricdebroux/pomodoro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cedricdebroux/pomodoro/issues"
+  },
+  "homepage": "https://github.com/Cedricdebroux/pomodoro#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "@becode/eslint-config": "^0.12.1",
+    "eslint": "^7.18.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-unicorn": "^27.0.0",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.12.10"
+  },
+  "babel": {
+    "presets": ["@babel/preset-react"]
+  }
+}
