@@ -13,10 +13,10 @@ function Compteur() {
     const [count, increment] = useIncrement(0, 1);
     return (
         <>
-            <button onClick={increment} type={"button"}>
-                {`Incrementer`}
-            </button>
             {count}
+            <button onClick={increment} type={"button"}>
+                {`UP`}
+            </button>
         </>
     );
 }
