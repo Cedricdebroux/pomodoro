@@ -1,7 +1,32 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, {useState} from "react";
+import {render} from "react-dom";
 import "./style.css";
-class HelloMessage extends React.Component {
+
+function useIncrement(initial, step) {
+    const [count, setCount] = useState(initial);
+    const increment = () => {
+        setCount(c => c + step);
+    };
+    return [count, increment];
+}
+function Compteur() {
+    const [count, increment] = useIncrement(0, 1);
+    return (
+        <>
+            <button onClick={increment} type={"button"}>
+                {`Incrementer`}
+            </button>
+            {count}
+        </>
+    );
+}
+render(
+    <div>
+        <Compteur />
+    </div>,
+    document.querySelector(`#app`),
+);
+/*class HelloMessage extends React.Component {
     render() {
         return (
             <div>
@@ -14,4 +39,4 @@ class HelloMessage extends React.Component {
 }
 
 const mountNode = document.querySelector("#app");
-ReactDOM.render(<HelloMessage name={"Cedric"} />, mountNode);
+ReactDOM.render(<HelloMessage name={"Cedric"} />, mountNode);*/
