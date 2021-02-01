@@ -4,7 +4,7 @@ import React, {useState} from "react";
 const Session = ({
     sessionLength,
     decrementSessionLengthByOneMinute,
-    incrementSessionLengthByOneMinute,   
+    incrementSessionLengthByOneMinute,
 }) => {
     const sessionLengthInMinutes = moment
         .duration(sessionLength, "s")
