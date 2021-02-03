@@ -15,24 +15,26 @@ const Session = ({
             <p className={"text-purple-500 text-5xl"} id={"session-length"}>
                 {sessionLengthInMinutes}
             </p>
-            <button
-                className={
-                    "mt-2 text-lg text-gray-800 px-4 py-1 bg-yellow-500 rounded"
-                }
-                type={"button"}
-                id={"session-decrement"}
-                onClick={decrementSessionLengthByOneMinute}>
-                {`-`}
-            </button>
-            <button
-                className={
-                    "mt-2 text-lg text-gray-800 px-4 py-1 bg-yellow-500 rounded"
-                }
-                type={"button"}
-                id={"session-increment"}
-                onClick={incrementSessionLengthByOneMinute}>
-                {`+`}
-            </button>
+            <div className={"flex"}>
+                <button
+                    className={
+                        "mt-2 text-lg text-gray-800 px-4 py-1 bg-blue-500 rounded mr-2"
+                    }
+                    type={"button"}
+                    id={"session-decrement"}
+                    onClick={decrementSessionLengthByOneMinute}>
+                    {`-`}
+                </button>
+                <button
+                    className={
+                        "mt-2 text-lg text-gray-800 px-4 py-1 bg-blue-500 rounded"
+                    }
+                    type={"button"}
+                    id={"session-increment"}
+                    onClick={incrementSessionLengthByOneMinute}>
+                    {`+`}
+                </button>
+            </div>
         </div>
     );
 };
