@@ -18,9 +18,19 @@ const TimeLeft = ({
     return (
         <div>
             <p id={"timer-label"}>{timeLabel}</p>
-            <p id={"time-left"}>{formattedTimeLeft}</p>
-            {formattedTimeLeft}
-            <button type={"button"} onClick={handleStartStopClick}>
+            <p
+                className={
+                    "text-yellow-500 text-7xl font-black relative bottom-20"
+                }
+                id={"time-left"}>
+                {formattedTimeLeft}
+            </p>
+            <button
+                className={
+                    "mt-2 text-lg text-gray-800 px-10 py-4 bg-red-400 rounded shadow-xl flex w-full justify-evenly mb-5"
+                }
+                type={"button"}
+                onClick={handleStartStopClick}>
                 {startStopButtonLabel}
             </button>
         </div>

@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
 import Break from "./components/break";
-import "./app.css";
 import Session from "./components/session";
 import TimeLeft from "./components/timeleft";
 
@@ -80,32 +79,40 @@ function App() {
         setTimeLeft(60 * 25);
     };
     return (
-        <div className={"App"}>
-            <Break
-                breakLength={breakLength}
-                decrementBreakLengthByOneMinute={
-                    decrementBreakLengthByOneMinute
-                }
-                incrementBreakLengthByOneMinute={
-                    incrementBreakLengthByOneMinute
-                }
-            />
-            <TimeLeft
-                handleStartStopClick={handleStartStopClick}
-                timerLabel={currentSessionType}
-                startStopButtonLabel={isStarted ? "stop" : "start"}
-                timeLeft={timeLeft}
-            />
-            <Session
-                sessionLength={sessionLength}
-                decrementSessionLengthByOneMinute={
-                    decrementSessionLengthByOneMinute
-                }
-                incrementSessionLengthByOneMinute={
-                    incrementSessionLengthByOneMinute
-                }
-            />
+        <div
+            className={
+                "flex flex-col h-screen items-center justify-center bg-green-200"
+            }>
+            <div className={"flex w-full justify-evenly"}>
+                <Break
+                    breakLength={breakLength}
+                    decrementBreakLengthByOneMinute={
+                        decrementBreakLengthByOneMinute
+                    }
+                    incrementBreakLengthByOneMinute={
+                        incrementBreakLengthByOneMinute
+                    }
+                />
+                <TimeLeft
+                    handleStartStopClick={handleStartStopClick}
+                    timerLabel={currentSessionType}
+                    startStopButtonLabel={isStarted ? "stop" : "start"}
+                    timeLeft={timeLeft}
+                />
+                <Session
+                    sessionLength={sessionLength}
+                    decrementSessionLengthByOneMinute={
+                        decrementSessionLengthByOneMinute
+                    }
+                    incrementSessionLengthByOneMinute={
+                        incrementSessionLengthByOneMinute
+                    }
+                />
+            </div>
             <button
+                className={
+                    "text-lg text-gray-800 px-5 py-1 bg-green-500 rounded shadow-xl"
+                }
                 type={"button"}
                 id={"reset"}
                 onClick={handleResetButtonClick}>
